@@ -54,7 +54,7 @@ export const registerPatient = async ({
   try {
     let file;
     if (identificationDocument) {
-      const inputFile = InputFile.fromBuffer(
+      const inputFile = InputFile.fromBlob(
         identificationDocument?.get("blobFile") as Blob,
         identificationDocument?.get("fileName") as string
       );
